@@ -21,7 +21,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Deploy to ${{ server }}
+      - name: Deploy to $server
         run: |
           # Add your deployment script or commands here
-          echo "Deploying to ${{ server }}"
+          echo "Deploying to $server"
