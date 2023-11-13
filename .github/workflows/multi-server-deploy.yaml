@@ -14,8 +14,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    server:
-      - "server1"
+    env:
+      server: "server1"
 
     steps:
       - name: Checkout Repository
