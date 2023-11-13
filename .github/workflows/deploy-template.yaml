@@ -18,4 +18,4 @@ jobs:
       - name: Deploy to $server
         run: |
           # Add your deployment script or commands here
-          echo "Deploying to "${{input.env}}""
+          echo "Deploying to "${{ input.env }}""
