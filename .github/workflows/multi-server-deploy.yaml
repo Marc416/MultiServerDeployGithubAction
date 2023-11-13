@@ -15,7 +15,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     server:
-      - server1
+      - "server1"
 
     steps:
       - name: Checkout Repository
