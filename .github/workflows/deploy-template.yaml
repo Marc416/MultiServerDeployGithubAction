@@ -23,4 +23,4 @@ jobs:
         run: |
           # Add your deployment script or commands here
           echo "Deploying to "${{ inputs.env }}""
-          echo "Deploying to "${{ inputs.default }}""
+          echo "Deploying to "${{ inputs.default-test }}""
