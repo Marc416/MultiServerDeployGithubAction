@@ -6,6 +6,10 @@ on:
       env:
         type: string
         required: true
+      default-test:
+        type: string
+        required: false
+        default: "default-test"
 
 jobs:
   deploy:
@@ -19,3 +23,4 @@ jobs:
         run: |
           # Add your deployment script or commands here
           echo "Deploying to "${{ inputs.env }}""
+          echo "Deploying to "${{ inputs.default }}""
