@@ -12,15 +12,14 @@ on:
         - staging
         - prod
 jobs:
+  strategy:
+    matrix:
+      server:
+        - server1
+        - server2
+        - server3
   deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        server:
-          - server1
-          - server2
-          - server3
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
