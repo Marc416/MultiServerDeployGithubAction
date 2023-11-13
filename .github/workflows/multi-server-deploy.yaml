@@ -12,19 +12,15 @@ on:
         - staging
         - prod
 jobs:
-  strategy:
-    matrix:
-      server:
-        - server1
-        - server2
-        - server3
   deploy:
     runs-on: ubuntu-latest
+    server: server1
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Deploy to ${{ matrix.server }}
+      - name: Deploy to ${{ server }}
         run: |
           # Add your deployment script or commands here
-          echo "Deploying to ${{ matrix.server }}"
+          echo "Deploying to ${{ server }}"
