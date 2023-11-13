@@ -1,4 +1,15 @@
 name: Deploy Template
+on:
+  workflow_dispatch:
+    deploy_env:
+      description: "배포 환경"
+      required: true
+      type: choice
+      options:
+        - dev
+        - test
+        - staging
+        - prod
 jobs:
   deploy:
     runs-on: ubuntu-latest
