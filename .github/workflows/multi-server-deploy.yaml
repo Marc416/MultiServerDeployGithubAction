@@ -26,4 +26,4 @@ jobs:
   deploy3:
     uses: ./.github/workflows/deploy-template.yaml
     with:
-      env: ${{github.event.inputs.server_name}}
+      env: ${{github.event.inputs.deploy_env}}
