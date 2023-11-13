@@ -2,15 +2,16 @@ name: Deploy to Servers
 
 on:
   workflow_dispatch:
-    deploy_env:
-      description: "배포 환경"
-      required: true
-      type: choice
-      options:
-        - dev
-        - test
-        - staging
-        - prod
+    inputs:
+      deploy_env:
+        description: "배포 환경"
+        required: true
+        type: choice
+        options:
+          - dev
+          - test
+          - staging
+          - prod
 jobs:
   deploy1:
     uses: ./.github/workflows/deploy-template.yaml
@@ -25,4 +26,4 @@ jobs:
   deploy3:
     uses: ./.github/workflows/deploy-template.yaml
     with:
-      env: Server1
+      env: ${{github.event.inputs.server_name}}
