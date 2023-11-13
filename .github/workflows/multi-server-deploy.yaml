@@ -1,0 +1,31 @@
+name: Deploy to Servers
+
+on:
+  workflow_dispatch:
+    deploy_env:
+      description: "배포 환경"
+      required: true
+      type: choice
+      options:
+        - dev
+        - test
+        - staging
+        - prod
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        server:
+          - server1
+          - server2
+          - server3
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Deploy to ${{ matrix.server }}
+        run: |
+          # Add your deployment script or commands here
+          echo "Deploying to ${{ matrix.server }}"
