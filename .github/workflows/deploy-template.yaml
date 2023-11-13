@@ -1,0 +1,12 @@
+name: Deploy Template
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Deploy to $server
+        run: |
+          # Add your deployment script or commands here
+          echo "Deploying to $server"

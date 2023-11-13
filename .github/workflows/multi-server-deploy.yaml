@@ -18,10 +18,21 @@ jobs:
       server: "server1"
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+    - name: Set variables
+      id: vars
+      run: |
+        echo "server=$server" >> "$GITHUB_ENV"
+        echo "stage=dev" >> "$GITHUB_OUTPUT"
+    - name: Deploy to $server
+      uses: ./.github/workflows/deploy-template.yml
 
-      - name: Deploy to $server
-        run: |
-          # Add your deployment script or commands here
-          echo "Deploying to $server"
+
+#
+#
+#      - name: Checkout Repository
+#        uses: actions/checkout@v2
+#
+#      - name: Deploy to $server
+#        run: |
+#          # Add your deployment script or commands here
+#          echo "Deploying to $server"
