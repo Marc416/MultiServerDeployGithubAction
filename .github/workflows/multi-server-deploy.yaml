@@ -12,7 +12,17 @@ on:
         - staging
         - prod
 jobs:
-  deploy:
+  deploy1:
+    uses: ./.github/workflows/deploy-template.yaml
+    with:
+      env: Server1
+
+  deploy2:
+    uses: ./.github/workflows/deploy-template.yaml
+    with:
+      env: Server1
+
+  deploy3:
     uses: ./.github/workflows/deploy-template.yaml
     with:
       env: Server1
