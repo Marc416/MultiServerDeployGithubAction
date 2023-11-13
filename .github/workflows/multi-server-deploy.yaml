@@ -13,26 +13,7 @@ on:
         - prod
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-    env:
-      server: "server1"
-
-    steps:
-    - name: Set variables
-      id: vars
-      run: |
-        echo "server=$server" >> "$GITHUB_ENV"
-        echo "stage=dev" >> "$GITHUB_OUTPUT"
     - name: Deploy to $server
       uses: ./.github/workflows/deploy-template.yml
-
-
-#
-#
-#      - name: Checkout Repository
-#        uses: actions/checkout@v2
-#
-#      - name: Deploy to $server
-#        run: |
-#          # Add your deployment script or commands here
-#          echo "Deploying to $server"
+      with:
+        env: "Server1"
