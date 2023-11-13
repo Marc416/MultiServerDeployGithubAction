@@ -13,7 +13,6 @@ on:
         - prod
 jobs:
   deploy:
-    - name: Deploy to Server1
-      uses: ./.github/workflows/deploy-template.yml
-      with:
-        env: "Server1"
+    uses: ./.github/workflows/deploy-template.yml
+    with:
+      env: "Server1"
