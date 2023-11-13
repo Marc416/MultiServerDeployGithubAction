@@ -6,9 +6,6 @@ on:
       env:
         type: string
         required: true
-      notify:
-        type: boolean
-        default: false
 
 jobs:
   deploy:
