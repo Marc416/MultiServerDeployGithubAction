@@ -2,7 +2,7 @@ name: Our Reusable
 
 on:
   workflow_call:
-    inputs:
+    input:
       env:
         type: string
         required: true
@@ -18,4 +18,4 @@ jobs:
       - name: Deploy to $server
         run: |
           # Add your deployment script or commands here
-          echo "Deploying to Server1"
+          echo "Deploying to "${{input.env}}""
