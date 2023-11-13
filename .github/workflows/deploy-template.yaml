@@ -2,10 +2,10 @@ name: Our Reusable
 
 on:
   workflow_call:
-#    inputs:
-#      env:
-#        type: string
-#        required: true
+    inputs:
+      env:
+        type: string
+        required: true
 
 jobs:
   deploy:
