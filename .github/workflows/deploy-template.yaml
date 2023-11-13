@@ -2,14 +2,14 @@ name: Our Reusable
 
 on:
   workflow_call:
-    input:
+    inputs:
       env:
         type: string
         required: true
 
 jobs:
   deploy:
-    environment: input.env
+    environment: inputs.env
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -18,4 +18,4 @@ jobs:
       - name: Deploy to $server
         run: |
           # Add your deployment script or commands here
-          echo "Deploying to "${{ input.env }}""
+          echo "Deploying to "${{ inputs.env }}""
