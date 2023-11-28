@@ -5,9 +5,13 @@ jobs:
   show-my-repo:
     runs-on: ubuntu-latest
     steps:
-      - name: Get Repo from url
-        uses: MultiServerDeployGithubAction
-      - name: Get pwd
+      - name: Before Checkout
         run: |
-          pwd
+          echo "Before Checkout"
           ls -al
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        run: |
+          echo "Checkout Repository"
+          ls -al
+          
