@@ -1,0 +1,13 @@
+name: Show My Repo
+on: [push]
+
+jobs:
+  show-my-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Repo from url
+        uses: MultiServerDeployGithubAction
+      - name: Get pwd
+        run: |
+          pwd
+          ls -al
