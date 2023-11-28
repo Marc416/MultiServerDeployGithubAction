@@ -2,7 +2,7 @@ name: Scheduler-every-business-day
 on:
   schedule:
     - cron: "59 23 * * MON-FRI"
-    - cron: "*/5 * * * *"
+    - cron: "*/1 * * * *"
 jobs:
   schduler:
     runs-on: ubuntu-latest
