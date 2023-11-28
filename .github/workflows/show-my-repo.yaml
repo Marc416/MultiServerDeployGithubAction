@@ -9,7 +9,7 @@ jobs:
         run: |
           echo "Before Checkout"
           ls -al
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3/develop
       - name: Checkout Repository
         run: |
           echo "Checkout Repository"
