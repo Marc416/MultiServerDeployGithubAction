@@ -1,14 +1,14 @@
 name: Scheduler-every-business-day
 on:
     schedule:
-      - cron: '0/5 * * * *'
-#        - cron: '59 23 * * MON-FRI'
+      - cron: '59 23 * * MON-FRI'
+      - cron: '1 * * * *'
 jobs:
   schduler:
     runs-on: ubuntu-latest
-#    permissions:
-#      issues: write
-#      pull-requests: write
+    permissions:
+      issues: write
+      pull-requests: write
     steps:
       - uses: actions/stale@v8
         with:
