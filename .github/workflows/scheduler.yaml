@@ -2,7 +2,7 @@ name: Scheduler-every-business-day
 on:
     schedule:
       - cron: '59 23 * * MON-FRI'
-      - cron: '1 * * * *'
+      - cron: '0/1 * * * *'
 jobs:
   schduler:
     runs-on: ubuntu-latest
@@ -13,6 +13,4 @@ jobs:
       - uses: actions/stale@v8
         with:
           stale-issue-message: "this is scheduled issue"
-          days-before-stale: 1
-          days-before-close: 5
 
