@@ -13,4 +13,6 @@ jobs:
       - uses: actions/stale@v8
         with:
           stale-issue-message: "this is scheduled issue"
+          days-before-stale: 1
+          days-before-close: 5
 
