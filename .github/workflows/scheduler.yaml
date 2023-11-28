@@ -10,7 +10,6 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-      - uses: actions/stale@v8
-        with:
-          stale-issue-message: "this is scheduled issue"
-
+      - name: One minute scheduler
+        run: |
+          echo "One minute scheduler"
