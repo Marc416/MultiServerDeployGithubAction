@@ -1,0 +1,16 @@
+name: Scheduler-every-business-day
+on:
+    schedule:
+        - cron: '59 23 * * MON-FRI'
+        - cron: '0/5 * * * *' # For test
+jobs:
+  schduler:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/stale@v8
+        with:
+          stale-issue-message: "this is scheduled issue"
+
