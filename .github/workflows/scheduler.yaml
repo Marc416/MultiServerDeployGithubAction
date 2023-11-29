@@ -13,3 +13,5 @@ jobs:
       - name: One minute scheduler
         run: |
           echo "One minute scheduler"
+          echo "time : $(date)"
+
