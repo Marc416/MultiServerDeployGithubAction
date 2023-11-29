@@ -1,0 +1,13 @@
+name: Github Action Context, Function, ENV
+on: [push]
+run-name: ${{github.actor}} pushed to ${{github.ref}}
+
+jobs:
+  Contexts, Function, Env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: start
+        run: |
+          echo "start"
+  
+
