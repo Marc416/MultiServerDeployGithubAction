@@ -2,6 +2,7 @@ name: Scheduler-every-business-day
 on:
   schedule:
     - cron: "59 23 * * 1-5" # 1,5 is Monday to Friday
+    - cron: "00 * * * 1-5" # Every Hour
 #    - cron: "0/15 * * * *"
 jobs:
   schduler:
