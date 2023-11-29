@@ -3,11 +3,10 @@ on: [push]
 run-name: ${{github.actor}} pushed to ${{github.ref}}
 
 jobs:
-  Contexts, Function, Env:
+  Context-test:
     runs-on: ubuntu-latest
     steps:
       - name: start
         run: |
           echo "start"
-  
 
