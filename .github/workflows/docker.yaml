@@ -20,11 +20,11 @@ jobs:
         run: |
           echo "API_URL: $API_URL"
       - name: Container in a step
-        uses: docker://node:18.16-alpine:3.17
+        uses: docker://node:18.16-alpine3.17
         with:
           entrypoint: /usr/local/bin/node     # 노드를 사용하기 위한 패스 지정(명령어)
           args: -p 2+3
       - name: Container Node Version
-        uses: docker://node:18.16-alpine:3.17
+        uses: docker://node:18.16-alpine3.17
         with:
           args: -v
