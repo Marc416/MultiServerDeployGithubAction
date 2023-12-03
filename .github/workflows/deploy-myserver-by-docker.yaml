@@ -19,7 +19,7 @@ jobs:
 #          docker build -t dockering-server:0.0.1 server-to-test/Dockerfile
 
 
-#      - name: Build the Docker image
-#        run: |
-#          docker build -t dockering-server:0.0.1 /server-to-test/Dockerfile
-#
+      - name: Build the Docker image
+        run: |
+          docker build -t dockering-server:0.0.1 ./server-to-test/Dockerfile
+
