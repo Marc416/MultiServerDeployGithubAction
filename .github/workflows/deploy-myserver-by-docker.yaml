@@ -18,6 +18,7 @@ jobs:
           password: ${{ secrets.DOCKER_PW }}
       - name: Build the Docker image
         run: |
-          chmod +x ./server-to-test/Dockerfile
-#          docker build -t dockering-server:0.0.1 ./server-to-test/Dockerfile
+          cd ./server-to-test
+          echo pwd
+          docker build -t dockering-server:0.0.1 .
 
