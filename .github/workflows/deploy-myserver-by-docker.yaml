@@ -22,4 +22,4 @@ jobs:
           docker build -t dockering-server:0.0.1 .
 
       - name: Push the Docker image to the registry
-        run: docker push juni416/dockering-ser드ver:0.0.1
+        run: docker push juni416/dockering-server:0.0.1
