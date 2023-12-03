@@ -11,7 +11,7 @@ jobs:
       - run: |
           echo "Checkout Repository"
           ls -al
-          docker build -t dockering-server:0.0.1 ./server-to-test/Dockerfile
+          docker build -t dockering-server:0.0.1 server-to-test/Dockerfile
 
 
 #      - name: Build the Docker image
