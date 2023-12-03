@@ -2,10 +2,8 @@ FROM openjdk:17-oracle
 WORKDIR /app
 COPY . .
 
-CMD microdnf install findutils
-CMD ./gradlew build -x test
+RUN microdnf install findutils
+RUN ./gradlew build -x test
 WORKDIR build/libs
-#CMD cd ./build/libs
-#RUN chmod +x ./build/libs/*.jar
-CMD chmod 644 server-to-test-0.0.1-SNAPSHOT.jar
+RUN chmod 644 server-to-test-0.0.1-SNAPSHOT.jar
 ENTRYPOINT ["java","-jar","server-to-test-0.0.1-SNAPSHOT.jar"]
