@@ -2,6 +2,6 @@ FROM openjdk:17
 WORKDIR /app
 COPY . .
 CMD ./gradlew build -x test
-RUN cp ./build/libs/*.jar ./
-#RUN chmod +x ./build/libs/*.jar
+CMD cp ./build/libs/*.jar ./
+CMD chmod +x ./server-to-test-0.0.1-SNAPSHOT.jar
 ENTRYPOINT ["java","-jar","./server-to-test-0.0.1-SNAPSHOT.jar"]
