@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
+
+
+      - name: Build the Docker image
         run: |
           echo pwd
           docker build -t dockering-server:0.0.1 ./server-to-test/Dockerfile
-        
-
-#      - name: Build the Docker image
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v1
