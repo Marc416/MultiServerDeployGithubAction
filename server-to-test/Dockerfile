@@ -3,7 +3,7 @@ WORKDIR /app
 COPY . .
 
 #RUN microdnf install findutils
-#RUN chmod +x ./gradlew
+RUN chmod +x ./gradlew
 RUN ./gradlew build -x test
 WORKDIR build/libs
 #CMD cd ./build/libs
