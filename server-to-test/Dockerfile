@@ -2,8 +2,7 @@ FROM openjdk:17-oracle
 WORKDIR /app
 COPY . .
 
-#RUN microdnf install findutils
-RUN chmod +x ./gradlew
+CMD microdnf install findutils
 CMD ./gradlew build -x test
 WORKDIR build/libs
 #CMD cd ./build/libs
