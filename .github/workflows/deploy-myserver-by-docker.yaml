@@ -19,7 +19,7 @@ jobs:
         run: |
           cd ./server-to-test
           echo pwd
-          docker build --platform linux/amd64,linux/arm64 -t juni416/dockering-server:0.0.1 .
+          docker build --platform linux/amd64 -t juni416/dockering-server:0.0.1 .
 
       - name: Push the Docker image to the registry
-        run: docker push --platform linux/amd64,linux/arm64 juni416/dockering-server:0.0.1
+        run: docker push --platform linux/amd64 juni416/dockering-server:0.0.1
