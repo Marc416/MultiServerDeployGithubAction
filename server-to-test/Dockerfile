@@ -1,7 +1,8 @@
 FROM openjdk:17
 WORKDIR /app
 COPY . .
-CMD ./gradlew build -x test
+RUN chmod +x ./gradlew
+RUN ./gradlew build -x test
 WORKDIR build/libs
 #CMD cd ./build/libs
 #RUN chmod +x ./build/libs/*.jar
