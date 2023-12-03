@@ -1,8 +1,8 @@
-FROM openjdk:17
+FROM openjdk:17-jdk-alpine
 WORKDIR /app
 COPY . .
 
-RUN microdnf install findutils
+#RUN microdnf install findutils
 RUN ./gradlew build -x test
 WORKDIR build/libs
 RUN chmod 644 server-to-test-0.0.1-SNAPSHOT.jar
