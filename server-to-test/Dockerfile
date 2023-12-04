@@ -1,9 +1,10 @@
-FROM eclipse-temurin:17-jre
+FROM ubuntu:latest
 WORKDIR /app
 COPY . .
-
 RUN echo "before gradlew"
+
 RUN ls -al
+FROM eclipse-temurin:17-jre
 RUN ./gradlew build -x test
 #WORKDIR build/libs
 WORKDIR /build/libs
