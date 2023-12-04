@@ -1,5 +1,4 @@
-#FROM eclipse-temurin:17-jre
-FROM ubuntu:latest
+FROM eclipse-temurin:8-jre
 WORKDIR /app
 COPY . .
 
