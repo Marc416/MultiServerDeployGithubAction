@@ -2,7 +2,7 @@ FROM eclipse-temurin:17-jre
 WORKDIR /app
 COPY . .
 
-RUN /bin/sh -c 'chmod +x ./gradlew'
+RUN 'chmod +x ./gradlew'
 RUN ./gradlew build -x test
 RUN ls -a
 RUN cd /build/libs
