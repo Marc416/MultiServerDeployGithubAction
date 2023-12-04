@@ -2,6 +2,7 @@ FROM eclipse-temurin:17
 WORKDIR /app
 COPY . .
 
+RUN ls
 RUN chmod 644 gradlew
 RUN ./gradlew build -x test
 #WORKDIR build/libs
