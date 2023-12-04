@@ -2,7 +2,7 @@ FROM eclipse-temurin:17-jre
 WORKDIR /app
 COPY . .
 
-RUN ./gradlew build -x test
+CMD ./gradlew build -x test
 #WORKDIR build/libs
 #RUN cp ./build/libs/server-to-test-0.0.1-SNAPSHOT.jar .
 #RUN chmod +x server-to-test-0.0.1-SNAPSHOT.jar
