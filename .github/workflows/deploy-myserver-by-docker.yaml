@@ -18,6 +18,7 @@ jobs:
       - name: Build the Docker image
         run: |
           cd ./server-to-test
+          ./gradlew build -x test
           docker build --platform linux/arm/v7 -t juni416/dockering-server:0.0.1 .
 
       - name: Push the Docker image to the registry
