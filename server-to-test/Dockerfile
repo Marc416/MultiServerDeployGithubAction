@@ -2,9 +2,9 @@ FROM eclipse-temurin:17-jre
 WORKDIR /app
 COPY . .
 
-CMD echo "before gradlew"
-CMD ls -al
-CMD ./gradlew build -x test
+RUN echo "before gradlew"
+RUN ls -al
+RUN ./gradlew build -x test
 #WORKDIR build/libs
 WORKDIR /build/libs
 CMD ls -al
