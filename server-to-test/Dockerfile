@@ -1,16 +1,10 @@
-FROM ubuntu:latest
+FROM eclipse-temurin:17
 WORKDIR /app
 COPY . .
-RUN echo "before gradlew"
 
-RUN ls -al
-FROM eclipse-temurin:17-jre
-RUN .gradlew build -x test
+RUN ./gradlew build -x test
 #WORKDIR build/libs
-WORKDIR /build/libs
-CMD ls -al
-CMD cp server-to-test-0.0.1-SNAPSHOT.jar .
-CMD ls -al
-
-#CMD chmod 644 /app/server-to-test-0.0.1-SNAPSHOT.jar
-#ENTRYPOINT ["java","-jar","/app/server-to-test-0.0.1-SNAPSHOT.jar"]
+COPY ./build/libs/server-to-test-0.0.1-SNAPSHOT.jar .
+#RUN chmod 644 server-to-test-0.0.1-SNAPSHOT.jar
+CMD chmod +x /opt/java/openjdk/bin/java
+ENTRYPOINT ["java","-jar","server-to-test-0.0.1-SNAPSHOT.jar"]
