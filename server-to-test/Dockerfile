@@ -1,4 +1,4 @@
-FROM openjdk:17
+FROM arm32v7/eclipse-temurin:17-jammy
 WORKDIR /app
 COPY . .
 
