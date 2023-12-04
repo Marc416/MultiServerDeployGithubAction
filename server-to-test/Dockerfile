@@ -5,7 +5,7 @@ RUN echo "before gradlew"
 
 RUN ls -al
 FROM eclipse-temurin:17-jre
-RUN ./gradlew build -x test
+RUN .gradlew build -x test
 #WORKDIR build/libs
 WORKDIR /build/libs
 CMD ls -al
