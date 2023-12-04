@@ -8,6 +8,6 @@ CMD sudo ./gradlew build -x test
 #CMD cd ..
 #CMD ls -al
 #CMD cp ./build/libs/server-to-test-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java","-jar","./build/libs/server-to-test-0.0.1-SNAPSHOT.jar app.jar"]
-#ENTRYPOINT ["./gradlew","build","-x","test"]
+ENTRYPOINT ["./gradlew","build","-x","test"]
+CMD ["java","-jar","./build/libs/server-to-test-0.0.1-SNAPSHOT.jar app.jar"]
 #CMD ls -al
