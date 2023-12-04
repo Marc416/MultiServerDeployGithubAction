@@ -1,3 +1,7 @@
+FROM ubuntu:latest
+RUN apt-get update
+RUN ls -al
+
 FROM eclipse-temurin:17-jre
 WORKDIR /app
 COPY . .
