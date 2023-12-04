@@ -7,5 +7,5 @@ CMD chmod 644 /build/libs/server-to-test-0.0.1-SNAPSHOT.jar
 #CMD cd ..
 #CMD ls -al
 #CMD cp ./build/libs/server-to-test-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java","-jar","./build/libs/server-to-test-0.0.1-SNAPSHOT.jar app.jar"]
+#ENTRYPOINT ["java","-jar","./build/libs/server-to-test-0.0.1-SNAPSHOT.jar app.jar"]
 #CMD ls -al
