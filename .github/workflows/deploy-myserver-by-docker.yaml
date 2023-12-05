@@ -15,14 +15,15 @@ jobs:
           username: ${{ secrets.DOCKER_ID }}
           password: ${{ secrets.DOCKER_PW }}
 
-#      - name: Build the Docker image
-#        run: |
-#          cd ./server-to-test
-#          docker buildx create --use
-#          docker buildx build --platform linux/arm/v7,linux/amd64 -t juni416/dockering-server:0.0.1 .
-#
-#      - name: Push the Docker image to the registry
-#        run: docker push juni416/dockering-server:0.0.1
+      - name: Build the Docker image
+        run: |
+          cd ./server-to-test
+#          multi architecture build를 사용하겠다는 선언 명령어
+          docker buildx create --use
+          docker buildx build --platform linux/arm/v7,linux/amd64 -t juni416/dockering-server:0.0.1 .
+
+      - name: Push the Docker image to the registry
+        run: docker push juni416/dockering-server:0.0.1
 
       - name: Install SSH client
         run: sudo apt-get install openssh-client
