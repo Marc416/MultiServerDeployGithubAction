@@ -20,10 +20,10 @@ jobs:
           cd ./server-to-test
 #          ./gradlew build -x test
           docker buildx create --use
-          docker buildx build --platform linux/arm/v7,linux/amd64 -t juni416/dockeringserver:0.0.1 .
+          docker buildx build --platform linux/arm/v7,linux/amd64 -t juni416/dockering-server:0.0.1 .
 
       - name: Push the Docker image to the registry
-        run: docker push juni416/dockeringserver:0.0.1
+        run: docker push juni416/dockering-server:0.0.1
 
 #      - name: Install SSH client
 #        run: sudo apt-get install openssh-client
