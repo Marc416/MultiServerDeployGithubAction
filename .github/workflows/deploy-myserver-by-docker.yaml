@@ -15,12 +15,12 @@ jobs:
           username: ${{ secrets.DOCKER_ID }}
           password: ${{ secrets.DOCKER_PW }}
 
-      - name: Build the Docker image and push to Docker Hub
-        run: |
-          cd ./server-to-test
-          ./gradlew build -x test
-          docker buildx create --use
-          docker buildx build --push --platform linux/arm/v7,linux/amd64 -t juni416/dockering-server:0.0.1 .
+#      - name: Build the Docker image and push to Docker Hub
+#        run: |
+#          cd ./server-to-test
+#          ./gradlew build -x test
+#          docker buildx create --use
+#          docker buildx build --push --platform linux/arm/v7,linux/amd64 -t juni416/dockering-server:0.0.1 .
 
       - name: Install SSH client
         run: sudo apt-get install openssh-client
@@ -33,8 +33,8 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: ${{ secrets.SERVER_PORT }}
           script: |
-            sudo docker pull juni416/dockering-server:0.0.1
-            sudo docker stop docker-test
-            sudo docker container rm docker-test
-            sudo docker run -d -p 18880:8080 --name docker-test juni416/dockering-server:0.0.1
+#            sudo docker pull juni416/dockering-server:0.0.1
+#            sudo docker stop docker-test
+#            sudo docker container rm docker-test
+#            sudo docker run -d -p 18880:8080 --name docker-test juni416/dockering-server:0.0.1
 
