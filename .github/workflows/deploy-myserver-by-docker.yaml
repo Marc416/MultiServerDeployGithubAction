@@ -32,7 +32,7 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           port: ${{ secrets.SERVER_PORT }}
-          script: |
+#          script: |
 #            sudo docker pull juni416/dockering-server:0.0.1
 #            sudo docker stop docker-test
 #            sudo docker container rm docker-test
